@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0756d8">
+  <meta name="description" content="Sankara SmartData — simple, convenient Nigerian bill payments and top-ups.">
+  <title>Sankara SmartData</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="hero">
+      <div class="topbar">
+        <a class="brand" href="#home" aria-label="Sankara SmartData home">
+          <span class="brand-mark">S</span>
+          <span class="brand-copy"><strong>Sankara</strong><b>SmartData</b></span>
+        </a>
+        <div class="top-actions">
+          <button class="icon-button" id="notificationsBtn" aria-label="Notifications" title="Notifications">♧<span class="notification-dot"></span></button>
+          <button class="icon-button menu-button" id="menuBtn" aria-label="Open menu" title="Menu">☰</button>
+        </div>
+      </div>
+      <div class="hero-copy">
+        <div><p class="eyebrow">FAST · SAFE · CONVENIENT</p><h1>Top up your world.</h1><p class="hero-subtitle">Anytime, anywhere.</p></div>
+        <div class="ng-badge" aria-label="Made for Nigeria"><span class="flag"><i></i></span><span>Made for<br><strong>Nigeria</strong></span></div>
+      </div>
+      <div class="hero-wave" aria-hidden="true"></div>
+    </header>
+
+    <main id="home" class="main-content">
+      <section class="wallet-card" aria-labelledby="walletTitle">
+        <div class="wallet-top"><div class="wallet-label"><span class="wallet-icon">▱</span><span id="walletTitle">Wallet Balance</span><button id="toggleBalance" class="eye-button" aria-label="Hide wallet balance">◉</button></div><span class="secure-pill"><span>●</span> Secure wallet</span></div>
+        <div class="wallet-bottom"><div><p class="balance" id="balanceValue">₦0.00</p><p class="wallet-hint">Your money, ready when you need it.</p></div><button class="fund-button" id="fundWalletBtn">Fund wallet <span>→</span></button></div>
+        <div class="wallet-shape shape-one"></div><div class="wallet-shape shape-two"></div>
+      </section>
+
+      <section class="services-section" aria-labelledby="servicesTitle">
+        <div class="section-heading"><div><h2 id="servicesTitle">Our Services</h2><p>What would you like to pay for?</p></div><span class="section-spark">✦</span></div>
+        <div class="service-grid">
+          <button class="service-tile" data-service="Airtime"><span class="service-icon airtime-icon">▯</span><span class="service-name">Airtime</span><span class="service-desc">Recharge any network</span><span class="tile-arrow">↗</span></button>
+          <button class="service-tile" data-service="Data"><span class="service-icon data-icon">◎</span><span class="service-name">Data</span><span class="service-desc">Browse, stream and share</span><span class="tile-arrow">↗</span></button>
+          <button class="service-tile" data-service="Cable TV"><span class="service-icon tv-icon">▣</span><span class="service-name">Cable TV</span><span class="service-desc">Renew your TV plan</span><span class="tile-arrow">↗</span></button>
+          <button class="service-tile" data-service="Electricity"><span class="service-icon power-icon">ϟ</span><span class="service-name">Electricity</span><span class="service-desc">Pay your power bill</span><span class="tile-arrow">↗</span></button>
+        </div>
+      </section>
+
+      <section class="activity-section" aria-labelledby="activityTitle">
+        <div class="section-heading activity-heading"><div><h2 id="activityTitle">Recent Activity</h2><p>Your latest transactions appear here.</p></div><button id="viewAllBtn" class="view-all">View all <span>→</span></button></div>
+        <div class="activity-list" id="activityList">
+          <div class="empty-activity"><span class="empty-icon">↻</span><strong>No transactions yet</strong><p>Your purchases will appear here after you start using Sankara SmartData.</p></div>
+        </div>
+      </section>
+      <p class="demo-note"><span>ⓘ</span> Preview mode — payments and purchases are not active yet.</p>
+    </main>
+
+    <nav class="bottom-nav" aria-label="Main navigation">
+      <button class="nav-item active" data-tab="Home"><span>⌂</span><small>Home</small></button>
+      <button class="nav-item" data-tab="Services"><span>▦</span><small>Services</small></button>
+      <button class="nav-item" data-tab="Wallet"><span>▱</span><small>Wallet</small></button>
+      <button class="nav-item" data-tab="History"><span>◷</span><small>History</small></button>
+      <button class="nav-item" data-tab="Profile"><span>♙</span><small>Profile</small></button>
+    </nav>
+  </div>
+
+  <dialog id="actionDialog" class="action-dialog">
+    <form method="dialog" class="dialog-card">
+      <button class="dialog-close" aria-label="Close">×</button>
+      <div class="dialog-icon" id="dialogIcon">✦</div>
+      <p class="dialog-kicker">SANKARA SMARTDATA</p>
+      <h2 id="dialogTitle">Coming soon</h2>
+      <p id="dialogMessage">This feature will be available after we connect the secure backend.</p>
+      <button class="dialog-primary">Okay, got it</button>
+    </form>
+  </dialog>
+  <script src="script.js"></script>
+</body>
+</html>
